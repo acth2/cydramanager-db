@@ -1,1 +1,11 @@
-7.0.3
+build['
+CC='gcc -std=c99' ./configure --prefix=/usr -G -O3 -r
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+']
