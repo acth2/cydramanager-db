@@ -1,1 +1,11 @@
-1.18.1
+build['
+./configure --prefix=/usr --docdir=/usr/share/doc/automake-1.18.1
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+']
