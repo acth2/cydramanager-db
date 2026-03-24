@@ -1,1 +1,15 @@
-5.46
+build['
+./configure --prefix=/usr
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+']
+
+download['
+https://astron.com/pub/file/file-5.46.tar.gz
+']
