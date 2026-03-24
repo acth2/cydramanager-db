@@ -1,1 +1,17 @@
-18
+build['
+./configure --prefix=/usr --disable-static --docdir=/usr/share/doc/acl-2.3.2
+make EFIDIR=CYDRA EFI_LOADER=grubx64.efi -j/#PROC#/
+']
+
+install['
+make install EFIDIR=CYDRA
+']
+
+dependency['
+efivar 39
+popt 1.19
+']
+
+download['
+https://github.com/rhboot/efibootmgr/archive/18/efibootmgr-18.tar.gz
+']
