@@ -1,1 +1,14 @@
-3.12.0
+build['
+pip3 wheel -w dist --no-cache-dir --no-build-isolation --no-deps $PWD
+']
+
+install['
+pip3 install --no-index --find-links dist flit_core
+']
+
+dependency['
+']
+
+download['
+https://pypi.org/packages/source/f/flit-core/flit_core-3.12.0.tar.gz
+']
