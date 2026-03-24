@@ -1,1 +1,22 @@
-2.43
+build['
+wget https://www.linuxfromscratch.org/patches/lfs/13.0/glibc-fhs-1.patch
+patch -Np1 -i ./glibc-fhs-1.patch
+mkdir -v build
+cd build
+echo "rootsbindir=/usr/sbin" > configparms
+../configure --prefix=/usr --disable-werror --disable-nscd libc_cv_slibdir=/usr/lib --enable-stack-protector=strong --enable-kernel=5.4
+make -j/#PROC#/
+']
+
+install['
+mkdir -v $PWD/dest
+make DESTDIR=$PWD/dest install
+install -vm755 dest/usr/lib/*.so.* /usr/lib
+']
+
+dependency['
+']
+
+download['
+https://ftpmirror.gnu.org/glibc/glibc-2.43.tar.xz
+']
