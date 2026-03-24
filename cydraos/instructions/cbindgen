@@ -9,3 +9,7 @@ install -Dm755 target/release/cbindgen /usr/bin/
 dependency['
 rustc 1.93.1
 ']
+
+download['
+https://github.com/mozilla/cbindgen/archive/v0.29.2/cbindgen-0.29.2.tar.gz
+']
