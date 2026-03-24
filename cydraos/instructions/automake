@@ -9,3 +9,7 @@ make install
 
 dependency['
 ']
+
+download['
+https://ftpmirror.gnu.org/automake/automake-1.18.1.tar.xz
+']
