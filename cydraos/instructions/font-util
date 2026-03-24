@@ -1,1 +1,16 @@
-1.4.1
+build['
+./configure --prefix=/usr
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+xcursor-themes 1.0.7
+']
+
+download['
+https://www.x.org/archive/individual/font/font-util-1.4.1.tar.xz
+']
