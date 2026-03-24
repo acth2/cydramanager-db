@@ -9,3 +9,7 @@ make install
 
 dependency['
 ']
+
+download['
+https://ftpmirror.gnu.org/bison/bison-3.8.2.tar.xz
+']
