@@ -1,1 +1,15 @@
-2.6.4
+build['
+./configure --prefix=/usr --disable-static --docdir=/usr/share/doc/flex-2.6.4
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+']
+
+download['
+https://github.com/westes/flex/releases/download/v2.6.4/flex-2.6.4.tar.gz
+']
