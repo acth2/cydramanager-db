@@ -1,1 +1,18 @@
-3.12
+build['
+./configure --prefix=/usr --disable-debuginfod --enable-libdebuginfod=dummy
+make -C lib -j/#PROC#/
+make -C libelf -j/#PROC#/
+']
+
+install['
+make -C libelf install
+install -vm644 config/libelf.pc /usr/lib/pkgconfig
+rm /usr/lib/libelf.a
+']
+
+dependency['
+']
+
+download['
+https://sourceware.org/ftp/elfutils/0.194/elfutils-0.194.tar.bz2
+']
