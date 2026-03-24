@@ -1,1 +1,23 @@
-2.14.1
+build['
+wget https://downloads.sourceforge.net/freetype/freetype-doc-2.14.1.tar.xz
+tar -xf ./freetype-doc-2.14.1.tar.xz --strip-components=2 -C docs
+sed -ri "s:.*(AUX_MODULES.*valid):\1:" modules.cfg
+sed -r "s:.*(#.*SUBPIXEL_RENDERING) .*:\1:" -i include/freetype/config/ftoption.h
+./configure --prefix=/usr --disable-static --enable-freetype-config --with-harfbuzz=dynamic
+make -j/#PROC#/
+']
+
+install['
+make install
+cp -v -R docs -T /usr/share/doc/freetype-2.14.1
+rm -v /usr/share/doc/freetype-2.14.1/freetype-config.1
+']
+
+dependency['
+libpng 1.5.55
+which 2.23
+']
+
+download['
+https://downloads.sourceforge.net/freetype/freetype-2.14.1.tar.xz
+']
