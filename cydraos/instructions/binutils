@@ -13,3 +13,7 @@ rm -rfv /usr/share/doc/gprofng
 
 dependency['
 ']
+
+download['
+https://sourceware.org/pub/binutils/releases/binutils-2.46.0.tar.xz
+']
