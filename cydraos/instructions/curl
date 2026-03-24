@@ -6,10 +6,14 @@ make -j/#PROC#/
 install['
 make install
 rm -rf docs/examples/.deps
-find docs \( -name Makefile\* -o -name \*.1       -o -name \*.3       -o -name CMakeLists.txt \) -delete
+find docs \( -name Makefile\* -o -name \*.1 -o -name \*.3 -o -name CMakeLists.txt \) -delete
 cp -v -R docs -T /usr/share/doc/curl-8.18.0
 ']
 
 dependency['
-libpsl
+libpsl 0.21.5
+']
+
+download['
+https://curl.se/download/curl-8.18.0.tar.xz
 ']
