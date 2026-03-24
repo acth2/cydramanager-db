@@ -1,1 +1,18 @@
-39
+build['
+wget https://www.linuxfromscratch.org/patches/blfs/13.0/efivar-39-upstream_fixes-1.patch
+patch -Np1 -i ./efivar-39-upstream_fixes-1.patch
+make ENABLE_DOCS=0 -j/#PROC#/
+']
+
+install['
+make install ENABLE_DOCS=0 LIBDIR=/usr/lib
+install -vm644 docs/efivar.1 /usr/share/man/man1 &&
+install -vm644 docs/*.3      /usr/share/man/man3
+']
+
+dependency['
+']
+
+download['
+https://github.com/rhboot/efivar/archive/39/efivar-39.tar.gz
+']
