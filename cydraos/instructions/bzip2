@@ -20,3 +20,7 @@ rm -fv /usr/lib/libbz2.a
 
 dependency['
 ']
+
+download['
+https://www.sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz
+']
