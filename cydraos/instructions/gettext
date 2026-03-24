@@ -1,1 +1,15 @@
-1.0
+build['
+./configure --disable-shared
+make -j/#PROC#/
+']
+
+install['
+cp -v gettext-tools/src/{msgfmt,msgmerge,xgettext} /usr/bin
+']
+
+dependency['
+']
+
+download['
+https://ftpmirror.gnu.org/gettext/gettext-1.0.tar.xz
+']
