@@ -16,3 +16,7 @@ sed -i 's/"1"/"8"/' /usr/share/man/man8/chroot.8
 
 dependency['
 ']
+
+download['
+https://ftpmirror.gnu.org/coreutils/coreutils-9.10.tar.xz
+']
