@@ -1,1 +1,15 @@
-4.10.0
+build['
+./configure --prefix=/usr --localstatedir=/var/lib/locate
+make /#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+']
+
+download['
+https://ftpmirror.gnu.org/findutils/findutils-4.10.0.tar.xz
+']
