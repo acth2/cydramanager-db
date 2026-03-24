@@ -8,5 +8,6 @@ Inside them you will find the build instructions for the package in two step:
  - dependency: a list of all dependencies of the package
  - build:      configure and build the package
  - install:    install the package
+ - download:   contains only one line which is the link to download the package
 dependency should always be present even if the package dont have any dependency.
 If you see a file not respecting the usual typography please report it.
