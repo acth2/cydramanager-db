@@ -1,1 +1,15 @@
-3.3
+build['
+./configure --prefix=/usr --docdir=/usr/share/doc/gperf-3.3
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+']
+
+download['
+https://ftpmirror.gnu.org/gperf/gperf-3.3.tar.gz
+']
