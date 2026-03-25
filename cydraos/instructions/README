@@ -4,7 +4,7 @@ If you find a file having text in more than the first line this is a bug.
 
 cydramanager-db/cydraos/instructions:
 There should be the same number of files in this folder as in cydramanager-db/cydraos.
-Inside them you will find the build instructions for the package in two step:
+Inside them you will find the build instructions for the package in five categories:
  - dependency: a list of all dependencies of the package
  - build:      configure and build the package
  - install:    install the package
