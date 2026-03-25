@@ -1,3 +1,3 @@
 # cydramanager-db
 cydramanager software database.
-this repository is used to update systems and install new packages
+this repository is used by cydramanager (https://github.com/acth2/cydramanager) to update systems and install new packages
