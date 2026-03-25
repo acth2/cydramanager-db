@@ -1,1 +1,18 @@
-6.3.0
+build['
+sed -i '/long long t1;/,+1s/()/(...)/' configure
+./configure --prefix=/usr --enable-cxx --disable-static --docdir=/usr/share/doc/gmp-6.3.0
+make -j/#PROC#/
+make html
+']
+
+install['
+make install
+make install-html
+']
+
+dependency['
+']
+
+download['
+https://ftpmirror.gnu.org/gmp/gmp-6.3.0.tar.xz
+']
