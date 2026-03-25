@@ -1,1 +1,17 @@
-6.18.0
+build['
+sed -i /ARPD/d Makefile
+rm -fv man/man8/arpd.8
+make NETNS_RUN_DIR=/run/netns -j/#PROC#/
+']
+
+install['
+make SBINDIR=/usr/sbin install
+install -vDm644 COPYING README* -t /usr/share/doc/iproute2-6.18.0
+']
+
+dependency['
+']
+
+download['
+https://www.kernel.org/pub/linux/utils/net/iproute2/iproute2-6.18.0.tar.xz
+']
