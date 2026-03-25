@@ -1,1 +1,15 @@
-1.8.12
+build['
+./configure --prefix=/usr --disable-nftables --enable-libipq
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+']
+
+download['
+https://www.netfilter.org/projects/iptables/files/iptables-1.8.12.tar.xz
+']
