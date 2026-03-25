@@ -1,1 +1,16 @@
-3.12
+build['
+sed -i "s/echo/#echo/" src/egrep.sh
+./configure --prefix=/usr
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+']
+
+download['
+https://ftpmirror.gnu.org/grep/grep-3.12.tar.xz
+']
