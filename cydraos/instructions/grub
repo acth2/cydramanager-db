@@ -1,1 +1,16 @@
-2.14
+build['
+./configure --prefix=/usr --sysconfdir=/etc --disable-efiemu --with-platform=efi --target=x86_64 --disable-werror
+make -j/#PROC#/
+']
+
+install['
+make -C grub-core install
+']
+
+dependency['
+efibootmgr 18
+']
+
+download['
+https://ftpmirror.gnu.org/grub/grub-2.14.tar.xz
+']
