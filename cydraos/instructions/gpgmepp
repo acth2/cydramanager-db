@@ -1,1 +1,18 @@
-2.0.0
+build['
+mkdir build
+cd    build
+cmake -D CMAKE_INSTALL_PREFIX=/usr ..
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+gpgme 2.0.1
+']
+
+download['
+https://www.gnupg.org/ftp/gcrypt/gpgmepp/gpgmepp-2.0.0.tar.xz
+']
