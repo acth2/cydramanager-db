@@ -1,1 +1,18 @@
-2.0.1
+build['
+mkdir build &&
+cd    build &&
+../configure --prefix=/usr --disable-static
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+libassuan 3.0.2
+']
+
+download['
+https://www.gnupg.org/ftp/gcrypt/gpgme/gpgme-2.0.1.tar.bz2
+']
