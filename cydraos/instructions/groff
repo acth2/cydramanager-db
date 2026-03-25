@@ -1,1 +1,15 @@
-1.23.0
+build['
+PAGE=A4 ./configure --prefix=/usr
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+']
+
+download['
+https://ftpmirror.gnu.org/groff/groff-1.23.0.tar.gz
+']
