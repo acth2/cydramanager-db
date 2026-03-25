@@ -1,1 +1,17 @@
-2.77
+build['
+./configure --prefix=/usr
+make -C pam_cap
+']
+
+install['
+install -v -m755 pam_cap/pam_cap.so      /usr/lib/security &&
+install -v -m644 pam_cap/capability.conf /etc/security
+']
+
+dependency['
+Linux-PAM 1.7.2
+']
+
+download['
+https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/libcap-2.77.tar.xz
+']
