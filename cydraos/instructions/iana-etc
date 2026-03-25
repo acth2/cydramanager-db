@@ -1,1 +1,13 @@
-20260202
+build['
+']
+
+install['
+cp -v services protocols /etc
+']
+
+dependency['
+']
+
+download['
+https://github.com/Mic92/iana-etc/releases/download/20260202/iana-etc-20260202.tar.gz
+']
