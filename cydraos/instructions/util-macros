@@ -1,1 +1,14 @@
-1.20.2
+build['
+./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --disable-static
+']
+
+install['
+make install
+']
+
+dependency['
+']
+
+download['
+https://www.x.org/pub/individual/util/util-macros-1.20.2.tar.xz
+']
