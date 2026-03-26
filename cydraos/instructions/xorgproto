@@ -1,1 +1,19 @@
-2025.1
+build['
+mkdir build
+cd build
+meson setup --prefix=/usr ..
+ninja -j/#PROC#/
+']
+
+install['
+ninja install &&
+mv -v /usr/share/doc/xorgproto{,-2025.1}
+']
+
+dependency['
+util-macros 1.20.2
+']
+
+download['
+https://xorg.freedesktop.org/archive/individual/proto/xorgproto-2025.1.tar.xz
+']
