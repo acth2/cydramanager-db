@@ -1,1 +1,17 @@
-1.17.0
+build['
+./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --disable-static --without-doxygen --docdir='${datadir}'/doc/libxcb-1.17.0
+LC_ALL=en_US.UTF-8 make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+libxau 1.0.12
+xcb-proto 1.17.0
+']
+
+download['
+https://xorg.freedesktop.org/archive/individual/lib/libxcb-1.17.0.tar.xz
+']
