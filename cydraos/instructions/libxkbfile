@@ -1,1 +1,15 @@
-1.2.0
+build['
+meson setup --prefix=/usr --sysconfdir=/etc --localstatedir=/var --buildtype=release build
+ninja -C build -j/#PROC#/
+']
+
+install['
+ninja -C build install
+']
+
+dependency['
+']
+
+download['
+https://www.x.org/pub/individual/lib/libxkbfile-1.2.0.tar.xz
+']
