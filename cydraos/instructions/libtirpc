@@ -1,1 +1,15 @@
-1.3.7
+build['
+./configure --prefix=/usr --sysconfdir=/etc --disable-static --disable-gssapi
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+']
+
+download['
+https://downloads.sourceforge.net/libtirpc/libtirpc-1.3.7.tar.bz2
+']
