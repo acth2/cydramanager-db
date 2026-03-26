@@ -1,1 +1,15 @@
-2.0.7
+build['
+./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --disable-static --disable-devel-docs
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+']
+
+download['
+https://www.x.org/pub/individual/lib/libXfont2-2.0.7.tar.xz
+']
