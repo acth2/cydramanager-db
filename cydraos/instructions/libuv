@@ -1,1 +1,16 @@
-1.52.0
+build['
+sh autogen.sh
+./configure --prefix=/usr --disable-static
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+']
+
+download['
+https://dist.libuv.org/dist/v1.52.0/libuv-v1.52.0.tar.gz
+']
