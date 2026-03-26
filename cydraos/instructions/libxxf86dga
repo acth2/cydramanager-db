@@ -1,1 +1,15 @@
-1.1.7
+build['
+./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --disable-static
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+']
+
+download['
+https://www.x.org/pub/individual/lib/libXxf86dga-1.1.7.tar.xz
+']
