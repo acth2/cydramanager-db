@@ -1,1 +1,16 @@
-1.59
+build['
+./configure --prefix=/usr --sysconfdir=/etc
+make -j/#PROC#/
+']
+
+install['
+make install
+install -v -m644 -D README /usr/share/doc/libgpg-error-1.59/README
+']
+
+dependency['
+']
+
+download['
+https://www.gnupg.org/ftp/gcrypt/libgpg-error/libgpg-error-1.59.tar.bz2
+']
