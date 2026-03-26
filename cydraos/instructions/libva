@@ -1,1 +1,17 @@
-2.23.0
+build['
+cd build
+meson setup --prefix=$XORG_PREFIX --buildtype=release &&
+ninja -j/#PROC#/
+']
+
+install['
+ninja install
+']
+
+dependency['
+libdrm 2.4.131
+']
+
+download['
+https://github.com/intel/libva/archive/2.23.0/libva-2.23.0.tar.gz
+']
