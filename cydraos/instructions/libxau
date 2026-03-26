@@ -1,1 +1,16 @@
-1.0.12
+build['
+./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --disable-static
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+xorgproto 2025.1
+']
+
+download['
+https://www.x.org/pub/individual/lib/libXau-1.0.12.tar.xz
+']
