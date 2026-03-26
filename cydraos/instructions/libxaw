@@ -1,1 +1,15 @@
-1.0.16
+build['
+./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --disable-static
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+']
+
+download['
+https://www.x.org/pub/individual/lib/libXaw-1.0.16.tar.xz
+']
