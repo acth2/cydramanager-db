@@ -1,1 +1,16 @@
-4.5.2
+build['
+sed -i '/strchr/s/const//' lib/crypt-{sm3,gost}-yescrypt.c
+./configure --prefix=/usr --enable-hashes=strong,glibc --enable-obsolete-api=no --disable-static --disable-failure-tokens
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+']
+
+download['
+https://github.com/besser82/libxcrypt/releases/download/v4.5.2/libxcrypt-4.5.2.tar.xz
+']
