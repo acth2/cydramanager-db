@@ -1,1 +1,16 @@
-4.21.0
+build['
+./configure --prefix=/usr --disable-static
+make -j/#PROC#/
+']
+
+install['
+make install
+make -C doc/reference install-data-local
+']
+
+dependency['
+']
+
+download['
+https://ftpmirror.gnu.org/libtasn1/libtasn1-4.21.0.tar.gz
+']
