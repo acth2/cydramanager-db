@@ -1,1 +1,19 @@
-2.15.1
+build['
+sed -i "/'git'/,+3d" meson.build
+mkdir build
+cd    build
+meson setup .. --prefix=/usr -D history=enabled -D icu=enabled
+ninja -j/#PROC#/
+']
+
+install['
+ninja install
+']
+
+dependency['
+icu 78.2
+']
+
+download['
+https://download.gnome.org/sources/libxml2/2.15/libxml2-2.15.1.tar.xz
+']
