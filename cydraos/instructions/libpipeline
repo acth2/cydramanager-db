@@ -1,1 +1,15 @@
-1.5.8
+build['
+./configure --prefix=/usr
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+']
+
+download['
+https://download.savannah.gnu.org/releases/libpipeline/libpipeline-1.5.8.tar.gz
+']
