@@ -1,1 +1,15 @@
-3.5.2
+build['
+./configure --prefix=/usr --disable-static --with-gcc-arch=native
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+']
+
+download['
+https://github.com/libffi/libffi/releases/download/v3.5.2/libffi-3.5.2.tar.gz
+']
