@@ -1,1 +1,15 @@
-1.0.11
+build['
+./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --disable-static
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+']
+
+download['
+https://www.x.org/pub/individual/app/xmodmap-1.0.11.tar.xz
+']
