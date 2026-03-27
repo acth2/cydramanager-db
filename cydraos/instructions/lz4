@@ -1,1 +1,14 @@
-1.10.0
+build['
+make BUILD_STATIC=no PREFIX=/usr -j/#PROC#/
+']
+
+install['
+make BUILD_STATIC=no PREFIX=/usr install
+']
+
+dependency['
+']
+
+download['
+https://github.com/lz4/lz4/releases/download/v1.10.0/lz4-1.10.0.tar.gz
+']
