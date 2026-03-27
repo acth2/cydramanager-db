@@ -1,1 +1,15 @@
-1.5.0
+build['
+./configure --prefix=/usr --sysconfdir=/etc --localstatedir=/var --disable-static
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+']
+
+download['
+https://www.x.org/pub/individual/app/xkbcomp-1.5.0.tar.xz
+']
