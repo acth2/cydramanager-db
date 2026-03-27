@@ -1,1 +1,18 @@
-1.47
+build['
+mkdir build
+cd    build
+meson setup --prefix=/usr --buildtype=release
+ninja -j/#PROC#/
+']
+
+install['
+ninja install
+']
+
+dependency['
+wayland 1.24.0
+']
+
+download['
+https://gitlab.freedesktop.org/wayland/wayland-protocols/-/releases/1.47/downloads/wayland-protocols-1.47.tar.xz
+']
