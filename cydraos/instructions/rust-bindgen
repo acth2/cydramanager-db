@@ -1,1 +1,18 @@
-0.72.1
+build['
+cargo build --release
+']
+
+install['
+install -v -m755 target/release/bindgen /usr/bin
+bindgen --generate-shell-completions bash > /usr/share/bash-completion/completions/bindgen
+bindgen --generate-shell-completions zsh  > /usr/share/zsh/site-functions/_bindgen
+']
+
+dependency['
+rustc 1.93.1
+llvm 21.1.8
+']
+
+download['
+https://github.com/rust-lang/rust-bindgen/archive/refs/tags/v0.72.1/rust-bindgen-0.72.1.tar.gz
+']
