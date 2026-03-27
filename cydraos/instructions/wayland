@@ -1,1 +1,18 @@
-1.24.0
+build['
+mkdir build
+cd    build
+meson setup .. --prefix=/usr --buildtype=release -D documentation=false
+ninja -j/#PROC#/
+']
+
+install['
+ninja install
+']
+
+dependency['
+libxml2 2.15.1
+']
+
+download['
+https://gitlab.freedesktop.org/wayland/wayland/-/releases/1.24.0/downloads/wayland-1.24.0.tar.xz
+']
