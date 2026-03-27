@@ -1,1 +1,15 @@
-0.3.113
+build['
+sed -i '/install.*libaio.a/s/^/#/' src/Makefile
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+']
+
+download['
+https://pagure.io/libaio/archive/libaio-0.3.113/libaio-0.3.113.tar.gz
+']
