@@ -1,1 +1,19 @@
-9.2.0078 
+build['
+echo '#define SYS_VIMRC_FILE  "/etc/vimrc"' >>  src/feature.h
+echo '#define SYS_GVIMRC_FILE "/etc/gvimrc"' >> src/feature.h
+./configure --prefix=/usr --with-features=huge --enable-gui=gtk3 --with-tlib=ncursesw
+make -j/#PROC#/
+']
+
+install['
+make install
+make -C src installruntime
+vim -c ":helptags /usr/share/doc/vim-9.2.0078" -c ":q"
+']
+
+dependency['
+']
+
+download['
+https://github.com/vim/vim/archive/v9.2.0078/vim-9.2.0078.tar.gz
+']
