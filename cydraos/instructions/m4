@@ -1,1 +1,15 @@
-1.4.21
+build['
+./configure --prefix=/usr
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+']
+
+download['
+https://ftpmirror.gnu.org/m4/m4-1.4.21.tar.xz
+']
