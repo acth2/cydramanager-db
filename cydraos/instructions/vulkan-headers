@@ -1,1 +1,18 @@
-1.4.341.0
+build['
+mkdir build
+cd    build
+cmake -D CMAKE_INSTALL_PREFIX=/usr -G Ninja ..
+ninja -j/#PROC#/
+']
+
+install['
+ninja install
+']
+
+dependency['
+cmake 4.2.3
+']
+
+download['
+https://github.com/KhronosGroup/Vulkan-Headers/archive/vulkan-sdk-1.4.341.0/Vulkan-Headers-vulkan-sdk-1.4.341.0.tar.gz
+']
