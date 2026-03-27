@@ -1,1 +1,20 @@
-0.26.2
+build['
+mkdir p11-build
+cd    p11-build
+meson setup .. --prefix=/usr --buildtype=release -D trust_paths=/etc/pki/anchors
+ninja -j/#PROC#/
+']
+
+install['
+ninja install
+ln -sfv /usr/libexec/p11-kit/trust-extract-compat /usr/bin/update-ca-certificates
+ln -sfv ./pkcs11/p11-kit-trust.so /usr/lib/libnssckbi.so
+']
+
+dependency['
+libtasn1 4.21.0
+']
+
+download['
+https://github.com/p11-glue/p11-kit/releases/download/0.26.2/p11-kit-0.26.2.tar.xz
+']
