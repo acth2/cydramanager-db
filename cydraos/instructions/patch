@@ -1,1 +1,15 @@
-2.8
+build['
+./configure --prefix=/usr
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+']
+
+download['
+https://ftpmirror.gnu.org/patch/patch-2.8.tar.xz
+']
