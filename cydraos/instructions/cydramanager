@@ -9,4 +9,5 @@ ninja -C build install
 
 dependency['
 curl 8.18.0
+tar 1.35
 ']
