@@ -8,5 +8,5 @@ ninja -C build install
 ']
 
 dependency['
-wget 1.25.0
+curl 8.18.0
 ']
