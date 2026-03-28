@@ -1,1 +1,15 @@
-2.23
+build['
+./configure --prefix=/usr
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+']
+
+download['
+https://ftpmirror.gnu.org/which/which-2.23.tar.gz
+']
