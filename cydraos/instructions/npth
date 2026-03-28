@@ -1,1 +1,15 @@
-1.8
+build['
+./configure --prefix=/usr
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+']
+
+download['
+https://www.gnupg.org/ftp/gcrypt/npth/npth-1.8.tar.bz2
+']
