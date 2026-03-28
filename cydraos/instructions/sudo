@@ -1,0 +1,15 @@
+build['
+./configure --prefix=/usr --libexecdir=/usr/lib --with-secure-path --with-env-editor --docdir=/usr/share/doc/sudo-1.9.17p2 --with-passprompt="[sudo] password for %p: "
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+']
+
+download['
+https://www.sudo.ws/dist/sudo-1.9.17p2.tar.gz
+']
