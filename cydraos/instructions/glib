@@ -1,0 +1,29 @@
+build['
+wget https://www.linuxfromscratch.org/patches/blfs/13.0/glib-2.86.4-upstream_fixes-1.patch
+wget https://download.gnome.org/sources/gobject-introspection/1.86/gobject-introspection-1.86.0.tar.xz
+patch -Np1 -i ./glib-2.86.4-upstream_fixes-1.patch
+[ -e /usr/include/glib-2.0 ] && rm -rf /usr/include/glib-2.0.old && mv -vf /usr/include/glib-2.0{,.old}
+mkdir build
+cd build
+meson setup .. --prefix=/usr --buildtype=release -D introspection=disabled -D glib_debug=disabled -D man-pages=enabled -D sysprof=disabled 
+ninja -j/#PROC#/
+']
+
+install['
+ninja install
+mkdir cydramanager_gobject
+tar xf ../gobject-introspection-1.86.0.tar.xz - C cydramanager_gobject/
+cd cydramanager_gobject
+meson setup gobject-introspection-1.86.0 gi-build --prefix=/usr --buildtype=release
+ninja -C gi-build -j/#PROC#/
+ninja -C gi-build install
+meson configure -D introspection=enabled
+ninja
+']
+
+dependency['
+']
+
+download['
+https://download.gnome.org/sources/glib/2.86/glib-2.86.4.tar.xz
+']
