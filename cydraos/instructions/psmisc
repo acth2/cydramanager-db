@@ -1,1 +1,15 @@
-23.7
+build['
+./configure --prefix=/usr
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+']
+
+download['
+https://sourceforge.net/projects/psmisc/files/psmisc/psmisc-23.7.tar.xz
+']
