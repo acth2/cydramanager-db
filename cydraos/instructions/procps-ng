@@ -1,1 +1,15 @@
-4.0.6
+build['
+./configure --prefix=/usr --docdir=/usr/share/doc/procps-ng-4.0.6 --disable-static --disable-kill --enable-watch8bit --with-systemd
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+']
+
+download['
+https://sourceforge.net/projects/procps-ng/files/Production/procps-ng-4.0.6.tar.xz
+']
