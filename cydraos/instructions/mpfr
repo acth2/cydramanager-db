@@ -1,1 +1,17 @@
-4.2.2
+build['
+./configure --prefix=/usr --disable-static --enable-thread-safe --docdir=/usr/share/doc/mpfr-4.2.2
+make -j/#PROC#/
+make html
+']
+
+install['
+make install
+make install-html
+']
+
+dependency['
+']
+
+download['
+https://ftpmirror.gnu.org/mpfr/mpfr-4.2.2.tar.xz
+']
