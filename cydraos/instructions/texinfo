@@ -1,1 +1,17 @@
-7.2
+build['
+sed 's/! $output_file eq/$output_file ne/' -i tp/Texinfo/Convert/*.pm
+./configure --prefix=/usr
+make -j/#PROC#/
+']
+
+install['
+make install
+make TEXMF=/usr/share/texmf install-tex
+']
+
+dependency['
+']
+
+download['
+https://ftpmirror.gnu.org/texinfo/texinfo-7.2.tar.xz
+']
