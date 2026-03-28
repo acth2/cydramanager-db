@@ -1,1 +1,16 @@
-6.0.3
+build['
+pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir $PWD
+']
+
+install['
+pip3 install --no-index --find-links dist --no-user PyYAML
+']
+
+dependency['
+cython 3.2.4
+libyaml 0.2.5
+']
+
+download['
+https://files.pythonhosted.org/packages/source/P/PyYAML/pyyaml-6.0.3.tar.gz
+']
