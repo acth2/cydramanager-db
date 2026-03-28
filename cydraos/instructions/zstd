@@ -1,1 +1,16 @@
-1.5.7
+build['
+./configure --prefix=/usr
+make -j/#PROC#/
+']
+
+install['
+make prefix=/usr install
+rm -v /usr/lib/libzstd.a
+']
+
+dependency['
+']
+
+download['
+https://github.com/facebook/zstd/releases/download/v1.5.7/zstd-1.5.7.tar.gz
+']
