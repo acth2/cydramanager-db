@@ -1,1 +1,16 @@
-1.25.0
+build['
+./configure --prefix=/usr --sysconfdir=/etc --with-ssl=openssl
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+libpsl 0.21.5
+']
+
+download['
+https://ftpmirror.gnu.org/wget/wget-1.25.0.tar.gz
+']
