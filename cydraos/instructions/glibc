@@ -4,7 +4,7 @@ patch -Np1 -i ./glibc-fhs-1.patch
 mkdir -v build
 cd build
 echo "rootsbindir=/usr/sbin" > configparms
-../configure --prefix=/usr --disable-werror --disable-nscd libc_cv_slibdir=/usr/lib --enable-stack-protector=strong --enable-kernel=5.4
+LD_LIBRARY_PATH="" ../configure --prefix=/usr --disable-werror --disable-nscd libc_cv_slibdir=/usr/lib --enable-stack-protector=strong --enable-kernel=5.4
 make -j/#PROC#/
 ']
 
