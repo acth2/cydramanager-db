@@ -1,0 +1,16 @@
+build['
+mkdir -p /usr/bin/cydramanager/gnu-hello
+./configure --prefix=/usr/bin/cydramanager/gnu-hello
+make -j/#PROC#/
+']
+
+install['
+make install
+']
+
+dependency['
+']
+
+download['
+https://ftp.gnu.org/gnu/hello/hello-2.12.3.tar.gz
+']
