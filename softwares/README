@@ -1,1 +1,7 @@
 This directory contains the software packages that cydramanager can install using the install argument. It follows the same structure and formatting as the updates.
+
+a binary installed by cydramanager should not be directory installed into /usr/bin but be in an other folder and which the binaries are ln to a directory in the path. This way the softwares are easy to uninstall and dont make the path like the way of just adding the path the software directory instead of making an ln. Theses commands 4 commands does that:
+[ -d /usr/bin/cydramanager/SOFTWARE_NAME/bin ] && find /usr/bin/cydramanager/SOFTWARE_NAME/bin -maxdepth 1 -type f -executable -exec ln -sf {} /usr/bin/cydramanager-binaries/bin/ \;
+[ -d /usr/bin/cydramanager/SOFTWARE_NAME/lib ] && mkdir -p /usr/bin/cydramanager-binaries/lib && find /usr/bin/cydramanager/SOFTWARE_NAME/lib -maxdepth 1 -type f -exec ln -sf {} /usr/bin/cydramanager-binaries/lib/ \;
+[ -d /usr/bin/cydramanager/SOFTWARE_NAME/include ] && mkdir -p /usr/bin/cydramanager-binaries/include && find /usr/bin/cydramanager/SOFTWARE_NAME/include -maxdepth 1 -type f -exec ln -sf {} /usr/bin/cydramanager-binaries/include/ \;
+[ -d /usr/bin/cydramanager/SOFTWARE_NAME/share ] && mkdir -p /usr/bin/cydramanager-binaries/share && find /usr/bin/cydramanager/SOFTWARE_NAME/share -maxdepth 1 -type f -exec ln -sf {} /usr/bin/cydramanager-binaries/share/ \;
