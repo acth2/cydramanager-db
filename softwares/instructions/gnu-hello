@@ -18,5 +18,5 @@ dependency['
 ']
 
 download['
-https://ftp.gnu.org/gnu/hello/hello-2.12.3.tar.gz
+https://fossies.org/linux/misc/hello-2.12.3.tar.gz
 ']
