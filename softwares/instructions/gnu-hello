@@ -18,5 +18,5 @@ dependency['
 ']
 
 download['
-https://fossies.org/linux/misc/hello-2.12.3.tar.gz
+https://mirrors.dotsrc.org/gnu/hello/hello-2.9.tar.gz
 ']
