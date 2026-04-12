@@ -1,0 +1,22 @@
+build['
+mkdir -p /usr/bin/cydramanager/cmatrix
+./configure --prefix=/usr/bin/cydramanager/cmatrix
+make -j/#PROC#/
+']
+
+install['
+make install
+mkdir -p /usr/bin/cydramanager-binaries
+
+[ -d /usr/bin/cydramanager/cmatrix/bin ] && find /usr/bin/cydramanager/cmatrix/bin -maxdepth 1 -type f -executable -exec ln -sf {} /usr/bin/cydramanager-binaries/bin/ \;
+[ -d /usr/bin/cydramanager/cmatrix/lib ] && mkdir -p /usr/bin/cydramanager-binaries/lib && find /usr/bin/cydramanager/cmatrix/lib -maxdepth 1 -type f -exec ln -sf {} /usr/bin/cydramanager-binaries/lib/ \;
+[ -d /usr/bin/cydramanager/cmatrix/include ] && mkdir -p /usr/bin/cydramanager-binaries/include && find /usr/bin/cydramanager/cmatrix/include -maxdepth 1 -type f -exec ln -sf {} /usr/bin/cydramanager-binaries/include/ \;
+[ -d /usr/bin/cydramanager/cmatrix/share ] && mkdir -p /usr/bin/cydramanager-binaries/share && find /usr/bin/cydramanager/cmatrix/share -maxdepth 1 -type f -exec ln -sf {} /usr/bin/cydramanager-binaries/share/ \;
+']
+
+dependency['
+']
+
+download['
+https://github.com/abishekvashok/cmatrix/releases/download/v2.0/cmatrix-v2.0-Butterscotch.tar
+']
