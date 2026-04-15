@@ -15,7 +15,6 @@ mkdir -p /usr/bin/cydramanager-binaries
 ']
 
 dependency['
-cmatrix 2.0
 ']
 
 download['
