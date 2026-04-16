@@ -1,0 +1,20 @@
+build['
+mkdir -p /usr/bin/cydramanager/neofetch
+']
+
+install['
+make install PREFIX=/usr/bin/cydramanager/neofetch
+mkdir -p /usr/bin/cydramanager-binaries
+
+[ -d /usr/bin/cydramanager/neofetch/bin ] && find /usr/bin/cydramanager/neofetch/bin -maxdepth 1 -type f -executable -exec ln -sf {} /usr/bin/cydramanager-binaries/bin/ \;
+[ -d /usr/bin/cydramanager/neofetch/lib ] && mkdir -p /usr/bin/cydramanager-binaries/lib && find /usr/bin/cydramanager/neofetch/lib -maxdepth 1 -type f -exec ln -sf {} /usr/bin/cydramanager-binaries/lib/ \;
+[ -d /usr/bin/cydramanager/neofetch/include ] && mkdir -p /usr/bin/cydramanager-binaries/include && find /usr/bin/cydramanager/neofetch/include -maxdepth 1 -type f -exec ln -sf {} /usr/bin/cydramanager-binaries/include/ \;
+[ -d /usr/bin/cydramanager/neofetch/share ] && mkdir -p /usr/bin/cydramanager-binaries/share && find /usr/bin/cydramanager/neofetch/share -maxdepth 1 -type f -exec ln -sf {} /usr/bin/cydramanager-binaries/share/ \;
+']
+
+dependency['
+']
+
+download['
+https://github.com/dylanaraps/neofetch/archive/refs/tags/7.1.0.tar.gz
+']
