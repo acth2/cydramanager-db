@@ -1,5 +1,5 @@
 build['
-mkdir -p /usr/bin/cydramanager/cmatrix
+mkdir -p /usr/bin/cydramanager/six
 pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir $PWD
 ']
 
