@@ -2,7 +2,7 @@ build['
 mkdir -p /usr/bin/cydramanager/gdb
 mkdir build
 cd build
-./configure  --prefix=/usr/bin/cydramanager/gdb --with-system-readline --with-system-zlib --with-python=/usr/bin/python3
+../configure  --prefix=/usr/bin/cydramanager/gdb --with-system-readline --with-system-zlib --with-python=/usr/bin/python3
 make -j/#PROC#/
 ']
 
