@@ -1,0 +1,27 @@
+build['
+mkdir -p /usr/bin/cydramanager/gnu-hello
+mkdir build
+cd build
+./configure  --prefix=/usr/bin/cydramanager/gnu-hello --with-system-readline --with-system-zlib --with-python=/usr/bin/python3
+make -j/#PROC#/
+']
+
+install['
+make -C gdb install
+make -C gdbserver install
+
+mkdir -p /usr/bin/cydramanager-binaries
+
+[ -d /usr/bin/cydramanager/gnu-hello/bin ] && find /usr/bin/cydramanager/gnu-hello/bin -maxdepth 1 -type f -executable -exec ln -sf {} /usr/bin/cydramanager-binaries/bin/ \;
+[ -d /usr/bin/cydramanager/gnu-hello/lib ] && mkdir -p /usr/bin/cydramanager-binaries/lib && find /usr/bin/cydramanager/gnu-hello/lib -maxdepth 1 -type f -exec ln -sf {} /usr/bin/cydramanager-binaries/lib/ \;
+[ -d /usr/bin/cydramanager/gnu-hello/include ] && mkdir -p /usr/bin/cydramanager-binaries/include && find /usr/bin/cydramanager/gnu-hello/include -maxdepth 1 -type f -exec ln -sf {} /usr/bin/cydramanager-binaries/include/ \;
+[ -d /usr/bin/cydramanager/gnu-hello/share ] && mkdir -p /usr/bin/cydramanager-binaries/share && find /usr/bin/cydramanager/gnu-hello/share -maxdepth 1 -type f -exec ln -sf {} /usr/bin/cydramanager-binaries/share/ \;
+']
+
+dependency['
+six 1.17.0
+']
+
+download['
+https://ftpmirror.gnu.org/gdb/gdb-17.1.tar.xz
+']
