@@ -1,0 +1,20 @@
+build['
+mkdir -p /usr/bin/cydramanager/cowsay
+']
+
+install['
+make install prefix=/usr/bin/cydramanager/cowsay
+mkdir -p /usr/bin/cydramanager-binaries
+
+[ -d /usr/bin/cydramanager/cowsay/bin ] && find /usr/bin/cydramanager/cowsay/bin -maxdepth 1 -type f -executable -exec ln -sf {} /usr/bin/cydramanager-binaries/bin/ \;
+[ -d /usr/bin/cydramanager/cowsay/lib ] && mkdir -p /usr/bin/cydramanager-binaries/lib && find /usr/bin/cydramanager/cowsay/lib -maxdepth 1 -type f -exec ln -sf {} /usr/bin/cydramanager-binaries/lib/ \;
+[ -d /usr/bin/cydramanager/cowsay/include ] && mkdir -p /usr/bin/cydramanager-binaries/include && find /usr/bin/cydramanager/cowsay/include -maxdepth 1 -type f -exec ln -sf {} /usr/bin/cydramanager-binaries/include/ \;
+[ -d /usr/bin/cydramanager/cowsay/share ] && mkdir -p /usr/bin/cydramanager-binaries/share && find /usr/bin/cydramanager/cowsay/share -maxdepth 1 -type f -exec ln -sf {} /usr/bin/cydramanager-binaries/share/ \;
+']
+
+dependency['
+']
+
+download['
+https://github.com/cowsay-org/cowsay/archive/refs/tags/v3.8.4.tar.gz
+']
