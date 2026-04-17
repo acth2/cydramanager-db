@@ -1,8 +1,8 @@
 build['
-mkdir -p /usr/bin/cydramanager/gnu-hello
+mkdir -p /usr/bin/cydramanager/gdb
 mkdir build
 cd build
-./configure  --prefix=/usr/bin/cydramanager/gnu-hello --with-system-readline --with-system-zlib --with-python=/usr/bin/python3
+./configure  --prefix=/usr/bin/cydramanager/gdb --with-system-readline --with-system-zlib --with-python=/usr/bin/python3
 make -j/#PROC#/
 ']
 
@@ -12,10 +12,10 @@ make -C gdbserver install
 
 mkdir -p /usr/bin/cydramanager-binaries
 
-[ -d /usr/bin/cydramanager/gnu-hello/bin ] && find /usr/bin/cydramanager/gnu-hello/bin -maxdepth 1 -type f -executable -exec ln -sf {} /usr/bin/cydramanager-binaries/bin/ \;
-[ -d /usr/bin/cydramanager/gnu-hello/lib ] && mkdir -p /usr/bin/cydramanager-binaries/lib && find /usr/bin/cydramanager/gnu-hello/lib -maxdepth 1 -type f -exec ln -sf {} /usr/bin/cydramanager-binaries/lib/ \;
-[ -d /usr/bin/cydramanager/gnu-hello/include ] && mkdir -p /usr/bin/cydramanager-binaries/include && find /usr/bin/cydramanager/gnu-hello/include -maxdepth 1 -type f -exec ln -sf {} /usr/bin/cydramanager-binaries/include/ \;
-[ -d /usr/bin/cydramanager/gnu-hello/share ] && mkdir -p /usr/bin/cydramanager-binaries/share && find /usr/bin/cydramanager/gnu-hello/share -maxdepth 1 -type f -exec ln -sf {} /usr/bin/cydramanager-binaries/share/ \;
+[ -d /usr/bin/cydramanager/gdb/bin ] && find /usr/bin/cydramanager/gdb/bin -maxdepth 1 -type f -executable -exec ln -sf {} /usr/bin/cydramanager-binaries/bin/ \;
+[ -d /usr/bin/cydramanager/gdb/lib ] && mkdir -p /usr/bin/cydramanager-binaries/lib && find /usr/bin/cydramanager/gdb/lib -maxdepth 1 -type f -exec ln -sf {} /usr/bin/cydramanager-binaries/lib/ \;
+[ -d /usr/bin/cydramanager/gdb/include ] && mkdir -p /usr/bin/cydramanager-binaries/include && find /usr/bin/cydramanager/gdb/include -maxdepth 1 -type f -exec ln -sf {} /usr/bin/cydramanager-binaries/include/ \;
+[ -d /usr/bin/cydramanager/gdb/share ] && mkdir -p /usr/bin/cydramanager-binaries/share && find /usr/bin/cydramanager/gdb/share -maxdepth 1 -type f -exec ln -sf {} /usr/bin/cydramanager-binaries/share/ \;
 ']
 
 dependency['
