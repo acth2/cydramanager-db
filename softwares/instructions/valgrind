@@ -1,0 +1,26 @@
+build['
+mkdir -p /usr/bin/cydramanager/valgrind
+wget https://www.linuxfromscratch.org/patches/blfs/svn/valgrind-3.26.0-upstream_fixes-1.patch
+patch -Np1 -i ./valgrind-3.26.0-upstream_fixes-1.patch
+autoreconf -fiv
+sed -i 's|/doc/valgrind||' docs/Makefile.in
+./configure --prefix=/usr/bin/cydramanager/valgrind --datadir=/usr/share/doc/valgrind-3.26.0
+make -j/#PROC#/
+']
+
+install['
+make install
+mkdir -p /usr/bin/cydramanager-binaries
+
+[ -d /usr/bin/cydramanager/valgrind/bin ] && find /usr/bin/cydramanager/valgrind/bin -maxdepth 1 -type f -executable -exec ln -sf {} /usr/bin/cydramanager-binaries/bin/ \;
+[ -d /usr/bin/cydramanager/valgrind/lib ] && mkdir -p /usr/bin/cydramanager-binaries/lib && find /usr/bin/cydramanager/valgrind/lib -maxdepth 1 -type f -exec ln -sf {} /usr/bin/cydramanager-binaries/lib/ \;
+[ -d /usr/bin/cydramanager/valgrind/include ] && mkdir -p /usr/bin/cydramanager-binaries/include && find /usr/bin/cydramanager/valgrind/include -maxdepth 1 -type f -exec ln -sf {} /usr/bin/cydramanager-binaries/include/ \;
+[ -d /usr/bin/cydramanager/valgrind/share ] && mkdir -p /usr/bin/cydramanager-binaries/share && find /usr/bin/cydramanager/valgrind/share -maxdepth 1 -type f -exec ln -sf {} /usr/bin/cydramanager-binaries/share/ \;
+']
+
+dependency['
+']
+
+download['
+https://sourceware.org/pub/valgrind/valgrind-3.26.0.tar.bz2
+']
