@@ -1,0 +1,15 @@
+build['
+mkdir -p /usr/bin/cydramanager/cmatrix
+pip3 wheel -w dist --no-build-isolation --no-deps --no-cache-dir $PWD
+']
+
+install['
+pip3 install --no-index --find-links dist --no-user six
+']
+
+dependency['
+']
+
+download['
+https://files.pythonhosted.org/packages/source/s/six/six-1.17.0.tar.gz
+']
