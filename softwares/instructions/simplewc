@@ -15,8 +15,6 @@ mkdir -p /usr/bin/cydramanager-binaries
 ']
 
 dependency['
-wlroots 0.18
-xwayland 24.1.9
 ']
 
 download['
