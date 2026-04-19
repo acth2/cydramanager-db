@@ -15,6 +15,7 @@ mkdir -p /usr/bin/cydramanager-binaries
 ']
 
 dependency['
+wlroots 0.18.2
 ']
 
 download['
