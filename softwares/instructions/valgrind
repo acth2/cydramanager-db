@@ -1,3 +1,5 @@
+#need to recompile glibc with build options to make valgrind work
+
 build['
 mkdir -p /usr/bin/cydramanager/valgrind
 wget https://www.linuxfromscratch.org/patches/blfs/svn/valgrind-3.26.0-upstream_fixes-1.patch
