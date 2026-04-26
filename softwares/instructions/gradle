@@ -5,7 +5,7 @@ make -j/#PROC#/
 ']
 
 install['
-unzip gradle-9.4.1-bin.zip -d /usr/bin/cydramanager/gradle
+unzip package_archive_0 -d /usr/bin/cydramanager/gradle
 mkdir -p /usr/bin/cydramanager-binaries
 
 [ -d /usr/bin/cydramanager/gradle/bin ] && find /usr/bin/cydramanager/gradle/bin -maxdepth 1 -type f -executable -exec ln -sf {} /usr/bin/cydramanager-binaries/bin/ \;
