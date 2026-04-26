@@ -1,0 +1,22 @@
+build['
+mkdir -p /usr/bin/cydramanager/gradle
+export GRADLE_HOME=/usr/bin/cydramanager/gradle
+make -j/#PROC#/
+']
+
+install['
+unzip gradle-9.4.1-bin.zip -d /usr/bin/cydramanager/gradle
+mkdir -p /usr/bin/cydramanager-binaries
+
+[ -d /usr/bin/cydramanager/gradle/bin ] && find /usr/bin/cydramanager/gradle/bin -maxdepth 1 -type f -executable -exec ln -sf {} /usr/bin/cydramanager-binaries/bin/ \;
+[ -d /usr/bin/cydramanager/gradle/lib ] && mkdir -p /usr/bin/cydramanager-binaries/lib && find /usr/bin/cydramanager/gradle/lib -maxdepth 1 -type f -exec ln -sf {} /usr/bin/cydramanager-binaries/lib/ \;
+[ -d /usr/bin/cydramanager/gradle/include ] && mkdir -p /usr/bin/cydramanager-binaries/include && find /usr/bin/cydramanager/gradle/include -maxdepth 1 -type f -exec ln -sf {} /usr/bin/cydramanager-binaries/include/ \;
+[ -d /usr/bin/cydramanager/gradle/share ] && mkdir -p /usr/bin/cydramanager-binaries/share && find /usr/bin/cydramanager/gradle/share -maxdepth 1 -type f -exec ln -sf {} /usr/bin/cydramanager-binaries/share/ \;
+']
+
+dependency['
+']
+
+download['
+https://services.gradle.org/distributions/gradle-9.4.1-bin.zip
+']
