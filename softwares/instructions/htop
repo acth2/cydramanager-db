@@ -1,0 +1,23 @@
+build['
+mkdir -p /usr/bin/cydramanager/htop
+./autogen.sh
+./configure --prefix=/usr/bin/cydramanager/htop
+make -j/#PROC#/
+']
+
+install['
+make install
+mkdir -p /usr/bin/cydramanager-binaries
+
+[ -d /usr/bin/cydramanager/htop/bin ] && find /usr/bin/cydramanager/htop/bin -maxdepth 1 -type f -executable -exec ln -sf {} /usr/bin/cydramanager-binaries/bin/ \;
+[ -d /usr/bin/cydramanager/htop/lib ] && mkdir -p /usr/bin/cydramanager-binaries/lib && find /usr/bin/cydramanager/htop/lib -maxdepth 1 -type f -exec ln -sf {} /usr/bin/cydramanager-binaries/lib/ \;
+[ -d /usr/bin/cydramanager/htop/include ] && mkdir -p /usr/bin/cydramanager-binaries/include && find /usr/bin/cydramanager/htop/include -maxdepth 1 -type f -exec ln -sf {} /usr/bin/cydramanager-binaries/include/ \;
+[ -d /usr/bin/cydramanager/htop/share ] && mkdir -p /usr/bin/cydramanager-binaries/share && find /usr/bin/cydramanager/htop/share -maxdepth 1 -type f -exec ln -sf {} /usr/bin/cydramanager-binaries/share/ \;
+']
+
+dependency['
+']
+
+download['
+https://github.com/htop-dev/htop/releases/download/3.5.1/htop-3.5.1.tar.xz
+']
